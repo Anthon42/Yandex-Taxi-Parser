@@ -38,7 +38,7 @@ const
   constLatitudeFieldName = 'latitude';
   constLongitudeFieldName = 'longitude';
 
-  constDBConnectionParams: TDBConnectionParams = (DatabaseName: 'localhost:spytaxi'; UserName: 'SYSDBA'; Password: '101';
+  constDBConnectionParams: TDBConnectionParams = (DatabaseName: 'localhost:yandextaxi'; UserName: 'SYSDBA'; Password: '101';
     Role: '');
   constSQLWriteDriver = 'insert into drivers_position (' + constDriverNameFieldName + ', ' + constTariffFieldName + ', ' +
     constDetectionTimeFieldName + ', ' + constLatitudeFieldName + ', ' + constLongitudeFieldName + ') values (:' +

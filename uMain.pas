@@ -6,14 +6,14 @@ uses
   // Пользовательские модули
   uCarDetector, uEventService, uDriversUploader, uCoordinateMaskGenerator
   //
-    , Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+    , Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TfrmMain = class(TForm)
     btnStartCapture: TButton;
     btnStopCapture: TButton;
-    rbgTariff: TRadioGroup;
     procedure btnStartCaptureClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnStopCaptureClick(Sender: TObject);
@@ -40,25 +40,25 @@ implementation
 
 {$R *.dfm}
 
-uses uDriversConst,uMKUtils;
+uses uDriversConst, uDriversTypes, uMKUtils;
 
 procedure TfrmMain.btnStartCaptureClick(Sender: TObject);
 var
-  lTariff: string;
+  lZonePosition: TZonePosition;
 begin
   btnStopCapture.Enabled := True;
   btnStartCapture.Enabled := False;
-  // Выбор тарифа такси
-  if rbgTariff.ItemIndex = 0 then
-    lTariff := constPrimierClass
-  else
-    lTariff := constEleteClass;
-
   FLoadCars := True;
+
   while FLoadCars do
   begin
     Application.ProcessMessages;
-    FCarDetector.LoadCars(FCoordinateMaskGenerator.NextPosition, lTariff);
+
+    lZonePosition := FCoordinateMaskGenerator.NextPosition;
+    // для Primier
+    FCarDetector.LoadCars(lZonePosition, constPrimierClass);
+    // для Elete
+    FCarDetector.LoadCars(lZonePosition, constEleteClass);
   end;
 end;
 
@@ -82,10 +82,13 @@ begin
   FCommonEventService := TCommonEventService.Create(True, nil);
   FCommonEventService.Start;
 
-  FDriversUploader := TDriversUploader.Create(FCommonEventService.LogMessageService);
-  FCarDetector := TCarDetector.Create(FCommonEventService.LogMessageService, FDriversUploader.UploadDriver);
+  FDriversUploader := TDriversUploader.Create
+    (FCommonEventService.LogMessageService);
+  FCarDetector := TCarDetector.Create(FCommonEventService.LogMessageService,
+    FDriversUploader.UploadDriver);
 
-  FCoordinateMaskGenerator := TCoordinateMaskGenerator.Create(constTopLeftPosition, constBottomRightPosition, constMaskSize);
+  FCoordinateMaskGenerator := TCoordinateMaskGenerator.Create
+    (constTopLeftPosition, constBottomRightPosition, constMaskSize);
   // Меняем мантису для конвертера типов, т.к с таким сепаратором работает яндекс такси
   FormatSETTINGS.DecimalSeparator := '.';
 end;
