@@ -3,9 +3,9 @@
         <ProjectGuid>{4D649DF2-81EE-4E6B-9CED-128E04F60B6D}</ProjectGuid>
         <ProjectVersion>18.6</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
-        <MainSource>HarvesterDrivers.dpr</MainSource>
+        <MainSource>YnadexTaxi.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -69,7 +69,7 @@
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
-        <SanitizedProjectName>HarvesterDrivers</SanitizedProjectName>
+        <SanitizedProjectName>YnadexTaxi</SanitizedProjectName>
         <VerInfo_Locale>1049</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
@@ -109,6 +109,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_DcuOutput>C:\temp\!dcu_xe103_r_x64\YandexTaxi\</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -165,33 +166,29 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">HarvesterDrivers.dpr</Source>
+                    <Source Name="MainSource">YnadexTaxi.dpr</Source>
                 </Source>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Windows\system32\FMX_SignalLabScopeDsn260.bpl">File C:\Windows\system32\FMX_SignalLabScopeDsn260.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Windows\system32\FMX_VideoLabBasicDsn260.bpl">File C:\Windows\system32\FMX_VideoLabBasicDsn260.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Windows\system32\FMX_MediaLabBasicDsn260.bpl">File C:\Windows\system32\FMX_MediaLabBasicDsn260.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\ProgramData\ImageEn\Delphi10.3Rio\DPKIEDB26.BPL">ImageEn DB Controls</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Exe\HarvesterDrivers.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Exe\YnadexTaxi.rsm" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win64">
-                        <RemoteName>HarvesterDrivers.exe</RemoteName>
+                        <RemoteName>YnadexTaxi.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win32\Debug\HarvesterDrivers.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\YnadexTaxi.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>HarvesterDrivers.exe</RemoteName>
+                        <RemoteName>YnadexTaxi.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Exe\HarvesterDrivers.rsm" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName="Exe\YnadexTaxi.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64">
-                        <RemoteName>HarvesterDrivers.rsm</RemoteName>
+                        <RemoteName>YnadexTaxi.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
