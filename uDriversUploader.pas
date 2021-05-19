@@ -5,14 +5,14 @@ interface
 uses uDriversTypes, uEventTypes, uDataConstantStorage, FIBDatabase, pFIBQuery, pFIBProps, System.SysfsdfUtils;
 
 typeasd
-  TDriversUploader = class(TObject)asd
+  TDriversUploader = class(TObject)asdwwwS
   privateasdasd
     FLogMessageMethod: TLogMessageMethod;as
 
     FDataConstantStorage: TDataConstantStorage;asdsad
 
     trWrite: TFIBTransaction;asdasd
-    qrWrite: TpFIBQuery;sfsdf
+    qrWrite: TpFIBQuery;sfsdfS
 sdasdasdzcxzc
     procedure DoLogMessage(const AValue: string; AEventType: TEventType);dssdfsfasdasdasd
   publicasdasd
