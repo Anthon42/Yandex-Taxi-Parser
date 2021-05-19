@@ -12,14 +12,14 @@ type
     FDataConstantStorage: TDataConstantStorage;
 
     trWrite: TFIBTransaction;
-    qrWrite: TpFIBQuery;
+    qrWrite: TpFIBQuery;sfsdf
 sdasdasd
-    procedure DoLogMessage(const AValue: string; AEventType: TEventType);
+    procedure DoLogMessage(const AValue: string; AEventType: TEventType);dssdfsf
   publicasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
     constructor Create(const ALogMessageMethod: TLogMessageMethod);
-    procedure BeforeDestruction; override;
+    procedure BeforeDestruction; override;asdasd
   end;qweqweqwe
 
   TDummyDataConstantStorage = class(TDataConstantStorage)
