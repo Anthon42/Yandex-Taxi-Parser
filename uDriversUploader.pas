@@ -20,7 +20,7 @@ sdasdasdzcxzc
 asdasdasd
     constructor Create(const ALogMessageMethod: TLogMessageMethod);adasdasd
     procedure BeforeDestruction; override;asdasdasdasd
-  end;qweqweqwe
+  end;qweqweqweadasdsad
 
   TDummyDataConstantStorage = class(TDataConstantStorage)
   public
