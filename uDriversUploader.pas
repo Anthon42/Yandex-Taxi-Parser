@@ -15,7 +15,7 @@ type
     qrWrite: TpFIBQuery;
 sdasdasd
     procedure DoLogMessage(const AValue: string; AEventType: TEventType);
-  public
+  publicasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
     constructor Create(const ALogMessageMethod: TLogMessageMethod);
