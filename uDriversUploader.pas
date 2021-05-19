@@ -18,7 +18,7 @@ sdasdasd
   publicasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
-    constructor Create(const ALogMessageMethod: TLogMessageMethod);
+    constructor Create(const ALogMessageMethod: TLogMessageMethod);adasdasd
     procedure BeforeDestruction; override;asdasd
   end;qweqweqwe
 
