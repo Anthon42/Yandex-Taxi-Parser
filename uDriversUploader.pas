@@ -19,7 +19,7 @@ sdasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
     constructor Create(const ALogMessageMethod: TLogMessageMethod);adasdasd
-    procedure BeforeDestruction; override;asdasd
+    procedure BeforeDestruction; override;asdasdasdasd
   end;qweqweqwe
 
   TDummyDataConstantStorage = class(TDataConstantStorage)
