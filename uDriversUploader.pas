@@ -17,7 +17,7 @@ type
     procedure DoLogMessage(const AValue: string; AEventType: TEventType);
   public
     procedure UploadDriver(const ADriver: TDriver);
-
+asdasdasd
     constructor Create(const ALogMessageMethod: TLogMessageMethod);
     procedure BeforeDestruction; override;
   end;qweqweqwe
