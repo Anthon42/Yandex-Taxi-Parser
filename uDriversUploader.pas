@@ -6,10 +6,10 @@ uses uDriversTypes, uEventTypes, uDataConstantStorage, FIBDatabase, pFIBQuery, p
 
 type
   TDriversUploader = class(TObject)
-  private
+  privateasdasd
     FLogMessageMethod: TLogMessageMethod;
 
-    FDataConstantStorage: TDataConstantStorage;
+    FDataConstantStorage: TDataConstantStorage;asdsad
 
     trWrite: TFIBTransaction;asdasd
     qrWrite: TpFIBQuery;sfsdf
@@ -18,7 +18,7 @@ sdasdasdzcxzc
   publicasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
-    constructor Create(const ALogMessageMethod: TLogMessageMethod);adasdasd
+    constructor Create(const ALogMessageMethod: TLogMessageMethod);adasdasd123123
     procedure BeforeDestruction; override;asdasdasdasd
   end;qweqweqweadasdsad
 
