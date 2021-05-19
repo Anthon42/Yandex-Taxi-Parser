@@ -4,10 +4,10 @@ interface
 
 uses uDriversTypes, uEventTypes, uDataConstantStorage, FIBDatabase, pFIBQuery, pFIBProps, System.SysfsdfUtils;
 
-type
-  TDriversUploader = class(TObject)
+typeasd
+  TDriversUploader = class(TObject)asd
   privateasdasd
-    FLogMessageMethod: TLogMessageMethod;
+    FLogMessageMethod: TLogMessageMethod;as
 
     FDataConstantStorage: TDataConstantStorage;asdsad
 
