@@ -20,7 +20,7 @@ type
 
     constructor Create(const ALogMessageMethod: TLogMessageMethod);
     procedure BeforeDestruction; override;
-  end;
+  end;qweqweqwe
 
   TDummyDataConstantStorage = class(TDataConstantStorage)
   public
