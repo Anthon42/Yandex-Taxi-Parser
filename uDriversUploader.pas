@@ -14,7 +14,7 @@ type
     trWrite: TFIBTransaction;asdasd
     qrWrite: TpFIBQuery;sfsdf
 sdasdasd
-    procedure DoLogMessage(const AValue: string; AEventType: TEventType);dssdfsfasd
+    procedure DoLogMessage(const AValue: string; AEventType: TEventType);dssdfsfasdasdasd
   publicasdasd
     procedure UploadDriver(const ADriver: TDriver);
 asdasdasd
