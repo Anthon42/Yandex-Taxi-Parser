@@ -9,7 +9,7 @@ type
   private
     FLogMessageMethod: TLogMessageMethod;
 
-    FDataConstantStorage: TDataConstantStorage;
+    FDataConstantStorage: TDataConstantStorage;asdsad
 
     trWrite: TFIBTransaction;asdasd
     qrWrite: TpFIBQuery;sfsdf
