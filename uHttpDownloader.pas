@@ -14,7 +14,7 @@ type
     FCookieManager: TIdCookieManager;
   public
     function Post(const AUrl: string; const APostData: TStringStream; out AResponseText: string; out AErrorStr: string): Boolean;
-
+123123
     procedure AfterConstruction; override;
     procedure BeforeDestruction; override;
   end;
